@@ -4,9 +4,125 @@
     <meta charset="utf-8">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
+  </head>  
+  <body>    
+    <header>
+      <nav>
+        <a href="#default" class="logo">ghibli</a>
+        <div class="header-right">
+          <button>Home</button>
+          <button>Películas</button>
+          <button>Géneros</button>
+          <button>Comunidad</button>
+      </nav>
+    </header>
+    
+    <main>
+      <div class="mensaje_bienvenida">         
+        <h1>Bienvenido</h1>
+        <h2>a</h2><h3><span>GHIBLI NO SEKAI</span></h3><br>
+        
+        <p>¡Disfruta del mejor contenido de películas animadas!</p><br>
+        <p>Desde los clásicos hasta los últimos estrenos de Studio Ghibli.</p>
+      </div>             
+
+      <div class="carrusel">
+        <input type="radio" id="i1" name="images" checked>
+        <input type="radio" id="i2" name="images">
+        <input type="radio" id="i3" name="images">
+        <input type="radio" id="i4" name="images">
+        <input type="radio" id="i5" name="images">
+  
+        <div class="slide_img" id="one">
+          <!-- <img src="https://images2.minutemediacdn.com/image/upload/c_fill,g_auto,h_1248,w_2220/v1555275062/  shape/mentalfloss/60237-spiritedaway.jpg?itok=dh4znXAF" alt="Spirited Away"> -->
+          <img src="https://i.pinimg.com/originals/c9/db/06/c9db06f07d4831b68812feca92d05843.jpg" alt="fondo de   ghibli">
+          <label for="i5" class="prev"><span>&#x2039</span></label>
+          <label for="i2" class="next"><span>&#x203a</span></label>
+        </div>
+
+        <div class="slide_img" id="two">
+          <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/ghibli2-1548333192.jpg" alt="">
+          <label for="i1" class="prev"><span>&#x2039</span></label>
+          <label for="i3" class="next"><span>&#x203a</span></label>
+        </div>
+
+        <div class="slide_img" id="three">
+          <img src="https://d3i6li5p17fo2k.cloudfront.net/en/rimage/pivot_half_1152/image/5330/a62d76623b89ef1efb5e37543e2504d3" alt="">
+          <label for="i2" class="prev"><span>&#x2039</span></label>
+          <label for="i4" class="next"><span>&#x203a</span></label>
+          <!-- https://d3i6li5p17fo2k.cloudfront.net/en/rimage/pivot_half_1152/image/5330/a62d76623b89ef1efb5e37543e2504d3 -->
+          <!-- https://images2.minutemediacdn.com/image/upload/c_fill,g_auto,h_1248,w_2220/v1555275062/shape/mentalfloss/60237-spiritedaway.jpg?itok=dh4znXAF -->
+        </div>
+
+        <div class="slide_img" id="four">
+          <img src="https://media.wired.co.uk/photos/606d9ea2ef15037f58853565/master/w_1600%2Cc_limit/ponyo.jpg" alt="">
+          <label for="i3" class="prev"><span>&#x2039</span></label>
+          <label for="i5" class="next"><span>&#x203a</span></label>
+        </div> 
+
+        <div class="slide_img" id="five">
+          <img src="https://studioghiblimovies.com/wp-content/uploads/2014/11/bg2.jpg" alt="">
+          <label for="i4" class="prev"><span>&#x2039</span></label>
+          <label for="i1" class="next"><span>&#x203a</span></label>
+        </div>
+  
+        <div id="nav_slide">
+          <label for="i1" class="dots" id="dot1"></label>
+          <label for="i2" class="dots" id="dot2"></label>
+          <label for="i3" class="dots" id="dot3"></label>
+          <label for="i4" class="dots" id="dot4"></label>
+          <label for="i5" class="dots" id="dot5"></label>
+        </div>  
+      </div>
+      
+      <div class="grid">
+        <div class="catalogo">  
+          <div class="fila">
+            <div class="portada"><img src="./imagenes/Castle_in_the_sky.PNG" /></div>
+            <div class="portada"><img src="./imagenes/My_Neighbor_Totoro.PNG" /></div>
+            <div class="portada"><img src="./imagenes/kikis_delivery_service.PNG" /></div>
+            <div class="portada"><img src="./imagenes/Grave_of_the_Fireflies.PNG" /></div>
+          </div>
+        </div>
+        <div class="catalogo">
+          <div class="fila">
+            <div class="portada"><img src="./imagenes/Only_Yesterday.PNG" /></div>
+            <div class="portada"><img src="./imagenes/Porco_Rosso.PNG" /></div>
+            <div class="portada"><img src="./imagenes/Pom_Poko.PNG" /></div>
+            <div class="portada"><img src="./imagenes/Whisper_of_the_Heart.PNG" /></div>
+          </div>
+        </div>
+        <div class="catalogo">
+          <div class="fila">
+            <div class="portada"><img src="./imagenes/Princess_Mononoke.PNG" /></div>
+            <div class="portada"><img src="./imagenes/My_Neighbors_the_Yamadas.PNG" /></div>
+            <div class="portada"><img src="./imagenes/Spirited_Away.PNG" /></div>
+            <div class="portada"><img src="./imagenes/The_Cat_Returns.PNG" /></div>
+          </div>
+        </div>      
+        <div class="catalogo">
+          <div class="fila">
+            <div class="portada"><img src="./imagenes/Howls_Moving_Castle.PNG" /></div>
+            <div class="portada"><img src="./imagenes/Tales_from_Earthsea.PNG" /></div>
+            <div class="portada"><img src="./imagenes/Ponyo_on_the_Cliff_by_the_Sea.PNG" /></div>
+            <div class="portada"><img src="./imagenes/The_Secret_World_of_Arrietty.PNG" /></div>
+          </div>
+        </div>      
+        <div class="catalogo">
+          <div class="fila">
+            <div class="portada"><img src="./imagenes/From_Up_on_Popy_Hill.PNG" /></div>
+            <div class="portada"><img src="./imagenes/The_Wind_Rises.PNG" /></div>
+            <div class="portada"><img src="./imagenes/The_Tale_of_the_Princess_Kaguya.PNG" /></div>
+            <div class="portada"><img src="./imagenes/When_Marnie_Was_There.PNG" /></div>
+          </div>
+        </div>          
+      </div>   
+    </main>
+
+    <footer>      
+      <p>Privacy Policy | Cookie Policy | Do Not Sell My Personal Information | Terms | </p>
+      <p> Desarrollado por Maizaga [&] KaterinT © 2021. Todos los derechos reservados.</p>         
+    </footer>
     <script src="main.js" type="module"></script>
   </body>
-</html>
+</html>,
