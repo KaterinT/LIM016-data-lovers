@@ -63,21 +63,18 @@ const containerElementos = (obj) => {
     let divElement = document.createElement('div');
     divElement.setAttribute('class','divPeliculas');
     divElement.innerHTML = `
-    <p>${obj.title}</p>`;
-
+    <p>${obj}</p>`;
     return divElement;
-
 };
 
-const contenidoPagePersonajes = document.getElementById("contenidoPagePersonajes")
-const verData = ( data) => {
-    data.forEach((obj) => {
-        contenidoPagePersonajes.appendChild(containerElementos(obj));
-        console.log(containerElementos(obj));
-    });
-};
+// const contenidoPagePersonajes = document.getElementById("contenidoPagePersonajes")
+// const verData = ( data) => {
+//     data.forEach((obj) => {
+//         contenidoPagePersonajes.appendChild(containerElementos(obj));
+//     });
+// };
 
-verData(data);
+containerElementos("casa");
 
 console.log(example, data);
 
