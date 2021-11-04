@@ -1,0 +1,446 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;      
+}
+
+body {
+    height: 100%;
+    background-color:#d4ebe2;
+}
+
+/*-----------------------características del header-------------------*/
+header {
+    width: 100%;
+    height: 150px;
+    margin: 0 0 30px 0;
+}
+
+nav {
+    width: 100%;
+    height: 150px;
+    display: inline-flex;
+    justify-content: space-around;
+    overflow: hidden;
+    background-color: #157181;
+    padding: 20px 50px;
+    align-items: center;
+}
+
+nav .logo {
+    display: flex;
+    width: 70%;
+    height: 100%;
+    align-items: center;
+    justify-content: left;
+}
+      
+nav button {
+    height: 100%;
+    width: 100%;
+    float: right;
+    color: rgb(238, 236, 236);
+    text-align: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem;
+    border: solid 3px #157181;
+    justify-content: center;
+    font-size: 1rem;    
+    font-family: fantasy;   
+    letter-spacing: 0.1rem; 
+    border-radius: 1rem;
+    background-color: #44a8b9;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    /* overflow: hidden; */
+    text-transform: uppercase;
+    box-shadow:
+       inset 0 -3em 3em rgba(0,0,0,0.1),
+       0 0  0 0px  #157181,
+       0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+            
+nav button:hover {
+    background-color:rgb(29, 61, 82);
+    color: rgb(240, 227, 227);
+    transition: 0.3s;
+    box-shadow: 0 0 2rem 0 #157181 inset, 0 0 0.5rem 0.5rem #64c7ba;
+}
+   
+.header-right {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    padding: 1rem 0 1rem 0;
+    align-items: center;
+}
+
+header h3 {
+    color: rgb(235, 231, 228);
+    font-size: 50px;
+    font-family:fantasy;
+}
+
+/* --------------------- características del main---------------------- */
+main {
+    height: 100%;
+    width: 100%;
+    /* display: none; */
+}
+/*---------------caracter÷isticas de la pagina principal----------------*/
+.principalPage h3 {
+    color: rgb(255, 119, 7);
+    font-size: 50px;
+    font-family:fantasy;
+    /* letter-spacing: 2px;  */
+}
+
+.principalPage nav, h3 {
+    color: rgb(255, 255, 255);
+}
+
+.principalPage h1, h2 {
+    color: rgb(8, 117, 121);
+    font-size: 40px;
+    font-family:fantasy;
+    letter-spacing: 1px; 
+}
+
+
+.principalPage h4 {
+    font-family:fantasy;
+    letter-spacing: 1px; 
+}
+
+.principalPage p {
+    font-family: fantasy;
+    letter-spacing: 1px; 
+    font-size: 15px;
+    color: aliceblue;
+}
+
+/*------------------características del carrusel-----------------*/
+.mensaje_bienvenida {
+    display: flex; 
+    flex-direction: column;   
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;    
+    width: 100%;
+    height: 400px;    
+    background-color:#d4ebe2;  
+    color: rgb(20, 25, 85);  
+    /* margin-bottom: 40px; */
+    
+}
+
+.carrusel {
+    width: 100%;
+    height: 600px;
+    background-color:#524e4e;       
+    position: relative;
+    width: 100%;
+    user-select: none;   
+    margin: 50px 0 50px 0;
+    border: solid #524e4e;
+}
+
+#i1,#i2,#i3,#i4,#i5 {
+    display: none;
+}
+
+.carrusel .slide_img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.carrusel .slide_img img{
+    width: 100%;
+    height: 100%;
+}
+
+.prev, .next {
+    width: 5%;
+    height: inherit;
+    position: absolute;
+    top:0;
+    background-color: rgba(88,88,88, .2);
+    color: rgba(244,244,244, .9);
+    z-index: 99;
+    transition: .45s;
+    cursor: pointer;
+    text-align: center;
+}
+
+.next {
+    right: 0;
+}
+
+.prev{
+    left:0;
+}
+
+label span{
+    position: absolute;
+    font-size: 40pt;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+.prev:hover, .next:hover {
+    transform: .3s;
+    background-color: rgba(88, 88, 89, .8);
+    color: #FFFF;
+}
+
+#nav_slide{
+    width: 100%;
+    bottom: 12%;
+    height: 11px;
+    position: absolute;
+    text-align: center;
+    z-index: 99;
+    cursor: default;
+}
+
+#nav_slide .dots{
+    top: 20px;
+    width: 14px;
+    height: 14px;
+    margin: 0 4px;
+    position: relative;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: rgba(0,0,0,0.6);
+    transition: .4s;
+}
+
+#nav_slide .dots:hover {
+    cursor: pointer;
+    background-color: rgba(255 ,255 ,255, 0.9);
+    transition: .25s;
+}
+
+.slide_img{z-index: -1;}
+
+  #i1:checked ~ #one  ,
+	#i2:checked ~ #two  ,
+	#i3:checked ~ #three,
+	#i4:checked ~ #four ,
+	#i5:checked ~ #five 
+	{z-index: 9; animation: scroll 1s ease-in-out;}
+
+	#i1:checked  ~  #nav_slide #dot1,
+	#i2:checked  ~  #nav_slide #dot2,
+	#i3:checked  ~  #nav_slide #dot3,
+	#i4:checked  ~  #nav_slide #dot4,
+	#i5:checked  ~  #nav_slide #dot5
+{ background-color: rgba(255,255,255,.9);}
+
+/*---------------------------características de la sección de filtrado---------------*/
+.seccionFiltrado{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    background: #104953;    
+}
+
+/*---------------------------características del catálogo de películas----------------*/
+.grid {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    padding: auto;
+    flex-wrap: wrap;
+    justify-content: space-around;  
+}
+  
+.portada {
+    width: auto;  
+    min-width: 20%;
+    display: flex;  
+    position: relative;
+    margin: 1.2rem;
+    overflow: hidden; 
+}
+
+.textoImg {
+    width: 100%;
+    height: 20%;
+    display: flex;    
+    z-index: 5;
+    position: absolute;
+    top: 80%;
+    justify-content: center;
+    background: rgba(20, 20, 20, 0.521);
+    font-family: fantasy;
+    letter-spacing: 0.1rem; 
+    font-size: 1.2rem;
+    text-shadow: 1rem 1rem 1rem 0;
+    color: aliceblue;
+    text-align: center;
+    align-items: center;
+    text-transform: uppercase;
+    border-radius: 0 0 1rem 1rem;  
+    overflow: hidden;
+} 
+
+button {
+    display: flex;
+    width: 100%;
+    border-color: #d4ebe2;
+    border-radius: 1rem; 
+    z-index: 1;    
+} 
+  
+button img {
+    height:100%;
+    width:100%;
+    background-repeat:no-repeat;
+    background-position:center;  
+    border-radius: 1rem;  
+}
+
+.portada :hover {
+    transition: 0.2s;
+    transform: scale(1.01);  
+    z-index: 2;              
+}
+
+/*--------------------------------características de pagina2--------------------------*/
+.pagina2 {
+    display: flex;
+    width:100%; 
+    background-color:#d4ebe2;
+    display: none;
+    flex-direction: column; 
+    /* height:auto; */    
+    /* vertical-align: middle; */     
+}
+
+.contenidoPage{
+    display: flex;
+    background-color:#d4ebe2;  
+    color: rgb(0, 0, 0);
+    font-family: fantasy;
+    justify-content: space-around;
+    width:100%;   
+    margin: 5em 0 5em 0;   
+}
+
+.contentImagPage2 {
+    height: 100%;
+    margin: 0 5% 0 5%; 
+    border-radius: 20px;
+}
+
+.contentImagPage2 img{
+    height:40rem;
+    width:30rem; 
+    border-radius: 1rem;
+}
+
+.contentMovie{
+    display: flex;
+    background-color:#d4ebe2;
+    flex-direction: column;
+    color: rgb(0, 0, 0);
+    font-family: fantasy;
+    letter-spacing: 0.1rem;
+    font-size: 1.5rem;
+    width:100%; 
+    margin: 0 5% 0 5%;   
+}
+
+.contentPage2 {
+    display: flex;
+    justify-content: left;
+    /* align-items: center; */
+    flex-direction: column;
+    margin: 0.5rem 0 0.5rem 0;  
+}
+
+/* .contenidoPagePersonajes{
+
+} */
+/* ---------------------características del footer--------------------- */
+ footer { 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  
+    width: 100%;
+    height: 100%; 
+    margin-top: 6.5rem;
+    font-size: 1.5rem;
+} 
+
+.contenedor-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.7rem;
+    letter-spacing: 0.07rem; 
+    background-color:#157181;
+    width: 100%    
+}
+
+.contenedor-secundario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.7rem;
+    background-color:#104953;
+    width: 100%;
+    font-family: fantasy;
+    letter-spacing: 0.1rem; 
+    font-size: 1.05rem;
+    color: aliceblue;
+}
+
+.titulo-seccion {
+    color: rgb(236, 222, 222);
+    font-size: 1.25rem;
+    letter-spacing: 0.5rem;
+}
+
+.redes-sociales {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.7rem;
+}
+
+i {
+    font-size: 30px;
+    padding:9px;
+    margin: 3px 15px;
+    color: #104953;
+    transition: .3s ease;  
+}
+
+#fb:hover {
+    cursor: pointer;
+    color: rgb(29, 69, 201);
+    transform: translateY(-6px);
+}
+
+
+#twitter:hover {
+    cursor: pointer;
+    color: #0CA2DC;
+    transform: translateY(-6px);
+}
+
+
+#yt:hover {
+    cursor: pointer;
+    color: rgb(255, 0, 0);
+    transform: translateY(-6px);
+}
+
+
