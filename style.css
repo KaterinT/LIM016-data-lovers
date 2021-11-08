@@ -779,7 +779,7 @@ i {
   .header-right {
       position: absolute;
       width: 80%;
-      height: calc(75vh - 80px);
+      /* height: calc(83vh - 80px); */
       background: #128291;  
       top: 10rem;
       right: -100%;
@@ -794,12 +794,13 @@ i {
       padding: 2rem;
       width: 90%;
   } */
+  
   header nav ul li{
       /* display: block; */
       padding: 0.5rem;
       width: 90%;
       margin: 1rem 0 1rem 0;
-      top:2px;
+      top:20px;
   }
   
   header nav ul li a{
