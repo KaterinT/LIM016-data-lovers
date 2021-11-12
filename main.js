@@ -31,22 +31,27 @@ let personajesPelicula = dataPeliculas.map(x => x.people);
 let locacionesPelicula = dataPeliculas.map(x => x.locations);
 let vehiculosPelicula = dataPeliculas.map(x => x.vehicles);
 
-// genera las portadas de los catálogos dinamicamente 
-let list='';
-let i = 1;
-dataPeliculas.forEach( (obj) => {
-    list +=`
-    <div class="portada">
-        <button id= "btnPortada${[i]}">
-        <img src="${obj.poster}" alt="">                
-        </button>
-        <div class="textoImg" id= "">${obj.title}</div>
-    </div>`
-    document.getElementById("boxPoster").innerHTML = list;
-    i++;  
+//--------------------------------------------------
+// genera las portadas de los catálogos dinamicamente en la vista principal
+function renderCatalogo(dataArray, htmlLocation){    
+    let list='';
+    let i = 1;
+    dataArray.forEach( (obj) => {
+        list +=`
+        <div class="portada">
+            <button id= "btnPortada${[i]}">
+            <img src="${obj.poster}" alt="">                
+            </button>
+            <div class="textoImg" id= "">${obj.title}</div>
+        </div>`
+        htmlLocation.innerHTML = list;
+        i++; 
+    });
+}
+let boxPoster = document.getElementById("boxPoster");
+renderCatalogo(dataPeliculas, boxPoster);
 
-});
-
+//--------------------------------------------------
 // ordenado alfabético ascendente
 let a_z = document.getElementById("a_z");
 a_z.addEventListener("click",() => {
@@ -61,23 +66,7 @@ a_z.addEventListener("click",() => {
         return 0;
     }) 
         
-    let list='';
-    let i = 1;
-
-    peliculasOrdenadasPorTitulo.forEach( (obj) => {
-        list +=`
-        <div class="portada">
-            <button id= "btnPortada${[i]}">
-            <img src="${obj.poster}" alt="">                
-            </button>
-            <div class="textoImg" id= "">${obj.title}</div>
-        </div>`
-        boxPosterFilter.innerHTML = list;
-        i++;  
-        
-    });      
-    /* crearVista2(peliculasOrdenadasPorTitulo); */
-    
+    renderCatalogo (peliculasOrdenadasPorTitulo, boxPosterFilter);
 }); 
 
 // ordenado alfabético descendente
@@ -97,24 +86,10 @@ z_a.addEventListener("click", () => {
             return 1;
         }
         return 0;
-    }) 
-    
-    
-    let list='';
-    let i = 1;
-
-    peliculasOrdenadasPorTitulo.forEach( (obj) => {
-        list +=`
-        <div class="portada">
-            <button id= "btnPortada${[i]}">
-            <img src="${obj.poster}" alt="">                
-            </button>
-            <div class="textoImg" id= "">${obj.title}</div>
-        </div>`
-        boxPosterFilter.innerHTML = list;
-        i++;        
     });
-})
+    
+    renderCatalogo (peliculasOrdenadasPorTitulo, boxPosterFilter);    
+});
 
 // ordenado cronológico ascendente
 let yearAsc = document.getElementById("yearAsc");
@@ -133,26 +108,11 @@ yearAsc.addEventListener("click",() => {
             return 1;
         }
         return 0;
-    }) 
-    /* console.log(peliculasOrdenadasPorYear); */
-    
-    let list='';
-    let i = 1;
-
-    peliculasOrdenadasPorYear.forEach( (obj) => {
-        list +=`
-        <div class="portada">
-            <button id= "btnPortada${[i]}">
-            <img src="${obj.poster}" alt="">                
-            </button>
-            <div class="textoImg" id= "">${obj.title}</div>
-        </div>`
-        boxPosterFilter.innerHTML = list;
-        i++;        
     });
 
+    renderCatalogo (peliculasOrdenadasPorYear, boxPosterFilter);  
 
-})
+});
 
 // ordenado cronológico descendente
 let yearDesc = document.getElementById("yearDesc");
@@ -171,24 +131,10 @@ yearDesc.addEventListener("click", () => {
             return 1;
         }
         return 0;
-    }) 
-    /* console.log(peliculasOrdenadasPorYear); */
-    
-    let list='';
-    let i = 1;
- 
-    peliculasOrdenadasPorYear.forEach( (obj) => {
-        list +=`
-        <div class="portada">
-            <button id= "btnPortada${[i]}">
-            <img src="${obj.poster}" alt="">                
-            </button>
-            <div class="textoImg" id= "">${obj.title}</div>
-        </div>`
-        boxPosterFilter.innerHTML = list;
-        i++;        
     });
-})
+
+    renderCatalogo (peliculasOrdenadasPorYear, boxPosterFilter);
+});
 
 //ordenado por calificación de Mayor a menor
 let mayorToMenor = document.getElementById("mayorToMenor");
@@ -206,24 +152,10 @@ mayorToMenor.addEventListener("click", () => {
             return 1;
         }
         return 0;
-    }) 
-    
-    let list='';
-    let i = 1;
-
-    peliculasOrdenadasPorcalificacion.forEach( (obj) => {
-        list +=`
-        <div class="portada">
-            <button id= "btnPortada${[i]}">
-            <img src="${obj.poster}" alt="">                
-            </button>
-            <div class="textoImg" id= "">${obj.title}</div>
-        </div>`
-        boxPosterFilter.innerHTML = list;
-        i++;        
     });
 
-})
+    renderCatalogo (peliculasOrdenadasPorcalificacion, boxPosterFilter);
+});
 
 //ordenado por calificación de menor a Mayor
 let menorToMayor = document.getElementById("menorToMayor");
@@ -241,28 +173,14 @@ menorToMayor.addEventListener("click", () => {
             return 1;
         }
         return 0;
-    }) 
-    
-    let list='';
-    let i = 1;
-
-    peliculasOrdenadasPorcalificacion.forEach( (obj) => {
-        list +=`
-        <div class="portada">
-            <button id= "btnPortada${[i]}">
-            <img src="${obj.poster}" alt="">                
-            </button>
-            <div class="textoImg" id= "">${obj.title}</div>
-        </div>`
-        boxPosterFilter.innerHTML = list;
-        i++;        
     });
+    
+    renderCatalogo (peliculasOrdenadasPorcalificacion, boxPosterFilter);
+});
 
-
-})
-
+//--------------------------------------------------
 //crea que catálogo con las imagenes de "personajes", "locaciones" y "vehículos"
-
+console.log(btnImagenes);
 for (let i=0; i< btnImagenes.length; i++) {
     
     btnImagenes[i].addEventListener("click",function() {
@@ -286,32 +204,22 @@ for (let i=0; i< btnImagenes.length; i++) {
         }  
         // crear el catalogo de locaciones
         for(let k = 0; k < locations.length; k++) {
-            contenidoPageLocaciones.appendChild(createLocation(locations[k])); 
-            /* if (locations !== ""){
-                contenidoPageLocaciones.appendChild(createLocation(locations[k]));  
-            } 
-            else{
-                contenidoPageLocaciones.innerHTML = "En esta película no es destacan locaciones espefíficas";
-            }  */
-                     
+            contenidoPageLocaciones.appendChild(createLocation(locations[k]));                      
         } 
         // crear el catalogo de vehículos
-        for(let l = 0; l < vehicles.length; l++) {
-            contenidoPageVehiculos.appendChild(createVehicles(vehicles[l]));
-            /* if (vehicles !== ""){
+        if (vehicles.length == 0){
+            contenidoPageVehiculos.innerHTML = "En esta película no es destacan vehículos espefíficos";
+        }
+        else{
+            for(let l = 0; l <= vehicles.length ; l++){
                 contenidoPageVehiculos.appendChild(createVehicles(vehicles[l]));
-            } 
-            else{
-                contenidoPageVehiculos.innerHTML = "En esta película no es destacan vehículos espefíficos";
-                                
-            }      */         
-        }     
+            }
+        }        
     }); 
 }
 
-
-/* 
-function crearVista2 () {
+//--------------------------------------------------
+/* function crearVista2 () {
     
     for (let i=0; i< btnImagenes.length; i++) {
         btnImagenes[i].addEventListener("click",function() {
@@ -327,14 +235,16 @@ function crearVista2 () {
             textPage8.innerHTML = "Puntaje: " + rt_score[i] + "/100"; 
         });   
     }    
-}
- */
- 
+} */
+
+
+//--------------------------------------------------
 //botones del header
 principalBtn.addEventListener("click", function(){    
     pagina2.style.display = "none";
     principalPage.style.display = "block";    
 });
+
 //--------------------------------------------------
 //crea los div en función de cada caracter 
 function createCharacter(character) {
@@ -372,6 +282,7 @@ function createVehicles(vehicles) {
     return nuevoElemento;
 }
 
+//--------------------------------------------------
 // reacción y funcionalidad del modal
 let cerrar = document.getElementById("close");
 let abrir = document.getElementById("cta");
@@ -406,5 +317,4 @@ window.addEventListener("click", function(e){
 });
 
 /* console.log(example, data); */
-
 
