@@ -1,7 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;      
+    box-sizing: border-box; 
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 body {
@@ -84,14 +85,15 @@ header h3 {
     color:#FFFF;
     font-size: 4rem;
     /* font-family:fantasy; */
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 header nav ul{
     width: auto;
     list-style: none;
     position: relative;  
-    font-family: fantasy;   
+    /* font-family: fantasy;    */
+    font-family: 'Source Sans Pro', sans-serif;
     color: #e4dbdb;
     margin: 0 1rem;
 }
@@ -111,7 +113,8 @@ header nav ul li{
     align-items: center;
     padding: 0.35rem;    
     border: solid 0.2rem #157181;       
-    font-family: fantasy;   
+    /* font-family: fantasy;    */
+    font-family: 'Source Sans Pro', sans-serif;
     letter-spacing: 0.1rem; 
     border-radius: 1rem;
     background-color: #44a8b9;    
@@ -209,7 +212,8 @@ header nav ul li a:hover{
     border: none;
     padding: 0;
     /* font-family: fantasy; */
-    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 1rem;
     /* line-height: 1.5rem; */
     transition: 0.4s;
@@ -242,7 +246,7 @@ main {
     color: rgb(255, 119, 7);
     font-size: 4rem;
     /* font-family:fantasy; */
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     /* letter-spacing: 2px;  */
 }
 
@@ -253,19 +257,22 @@ main {
 .principalPage h1, h2 {
     color: rgb(8, 117, 121);
     font-size: 3.2rem;
-    font-family:fantasy;
+    /* font-family:fantasy; */
+    font-family: 'Source Sans Pro', sans-serif;
     letter-spacing: 0.2rem; 
 }
 
 
 .principalPage h4 {
     /* font-family:fantasy; */
-    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Source Sans Pro', sans-serif;
     letter-spacing: 0.15rem; 
 }
 
 .principalPage p {
-    font-family: fantasy;
+    /* font-family: fantasy; */
+    font-family: 'Source Sans Pro', sans-serif;
     letter-spacing: 0.15rem; 
     color: #e4dbdb;
     font-size: 1.5rem;
@@ -406,7 +413,8 @@ label span{
     align-items:center;
     /* vertical-align: middle;    */
     background-color: #157181;
-    font-family: fantasy;
+    /* font-family: fantasy; */
+    font-family: 'Source Sans Pro', sans-serif;
     /* letter-spacing: 0.1rem; */ 
     /* letter-spacing: 0.18rem; */
     color: #e4dbdb;   
@@ -428,6 +436,7 @@ label span{
     justify-content: space-around; */
     font-size: 1.4rem;
     /* font-family: fantasy; */
+    font-family: 'Source Sans Pro', sans-serif;
     letter-spacing: 0.1rem;
     /* color: rgb(219, 226, 152); */
     color:rgba(231, 186, 101, 0.952);
@@ -482,13 +491,6 @@ label span{
     /* cursor: pointer;  */
 }
 
-.secfiltrado nav ul li:hover > ul{
-    top: 3rem;
-    opacity: 1;
-    visibility: visible; 
-    /* width:13rem; */
-}
-
 .secfiltrado nav ul ul li{
     /* display: flex; */
     position: relative;
@@ -504,15 +506,22 @@ label span{
     left: -0.6rem;
 } 
 
-.secfiltrado nav ul ul li a:hover{
-    color: rgb(176, 235, 207);
-    box-shadow: none;
+.secfiltrado nav ul li:hover > ul{
+    top: 3rem;
+    opacity: 1;
+    visibility: visible; 
+    /* width:13rem; */
 }
 
 .secfiltrado nav ul li a:hover{
     border-radius: 0.3rem;
     /* box-shadow: 0 0 0.2rem #85bec9, 0 0 0.2rem #53909b; */
     color: rgb(176, 235, 207);
+}
+
+.secfiltrado nav ul ul li a:hover{
+    color: rgb(176, 235, 207);
+    box-shadow: none;
 }
 
 /*----------------------Sección de ordenado-----------------------*/
@@ -567,7 +576,8 @@ label span{
     top: 80%;
     justify-content: center;
     background: rgba(20, 20, 20, 0.521);
-    font-family: fantasy;
+    /* font-family: fantasy; */
+    font-family: 'Source Sans Pro', sans-serif;
     letter-spacing: 0.15rem; 
     font-size: 2rem;
     text-shadow: 1rem 1rem 1rem 0;
@@ -622,7 +632,8 @@ button img {
     /* background-color: #b0dfe6; */
     background-color:#d4ebe2; 
     color: rgb(0, 0, 0);
-    font-family: fantasy;
+    /* font-family: fantasy; */
+    font-family: 'Source Sans Pro', sans-serif;
     justify-content: space-around;
     width:100%;   
     margin: 5em 0 5em 0;   
@@ -650,7 +661,8 @@ button img {
     background-color:#d4ebe2;
     flex-wrap: wrap;
     color: rgb(0, 0, 0);
-    font-family: fantasy;
+    /* font-family: fantasy; */
+    font-family: 'Source Sans Pro', sans-serif;
     letter-spacing: 0.1rem;
     font-size: 1.5rem;
     width:100%; 
@@ -674,7 +686,8 @@ button img {
     align-content: flex-start;  
     background: rgb(76, 185, 185);
     border-radius: 0.5rem;
-    font-family: fantasy;
+    /* font-family: fantasy; */
+    font-family: 'Source Sans Pro', sans-serif;
     letter-spacing: 0.1rem; 
     font-size: 1.05rem;
     color: rgb(0, 0, 0);
@@ -696,7 +709,8 @@ button img {
     background: rgb(255, 250, 250);
     color: rgb(31, 29, 29);
     margin: 2rem;
-    font-family: fantasy;
+    /* font-family: fantasy; */
+    font-family: 'Source Sans Pro', sans-serif;
     letter-spacing: 0.1rem; 
     font-size: 1.5rem;   
 }
@@ -717,7 +731,8 @@ button img {
 .TitleSec{
     color: rgb(31, 29, 29);
     margin: 2rem;
-    font-family: fantasy;
+    /* font-family: fantasy; */
+    font-family: 'Source Sans Pro', sans-serif;
     letter-spacing: 0.1rem; 
     font-size: 1.5rem;   
 }
@@ -921,7 +936,8 @@ button img {
     padding: 0.7rem;
     background-color:#104953;
     width: 100%;
-    font-family: fantasy;
+    /* font-family: fantasy; */
+    font-family: 'Source Sans Pro', sans-serif;
     letter-spacing: 0.1rem; 
     font-size: 1.05rem;
     color: #e4dbdb;
@@ -1039,7 +1055,8 @@ i {
         align-items: center;
         padding: 0.05rem;    
         border: solid 0.2rem #157181;       
-        font-family: fantasy;   
+        /* font-family: fantasy;    */
+        font-family: 'Source Sans Pro', sans-serif;
         text-align: center;
         letter-spacing: 0.1rem; 
         justify-items: center;
@@ -1176,7 +1193,7 @@ i {
     }
 }
  
-@media (max-width: 1250px) {
+@media (max-width: 1337px) {
     .secfiltrado{
         width: 100%;    
         height: 13rem;
@@ -1187,7 +1204,8 @@ i {
         align-items:inherit;
         /* vertical-align: middle;    */
         background-color: #157181;
-        font-family: fantasy;
+        /* font-family: fantasy; */
+        font-family: 'Source Sans Pro', sans-serif;
         /* letter-spacing: 0.1rem; */ 
         /* letter-spacing: 0.18rem; */
         color: #e4dbdb;   
@@ -1196,10 +1214,11 @@ i {
     .secfiltrado nav ul li a {
         display: flex;
         /* position: relative; */
+        align-content: center;
         z-index: 200;
         color: rgb(230, 222, 222);
         line-height: 1.7rem;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         letter-spacing: 0.1rem;
         text-transform: uppercase;
         padding: 0.02rem;
