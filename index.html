@@ -5,6 +5,9 @@
     <title>Data Lovers</title>
     <script src="https://kit.fontawesome.com/59bcf52c44.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
   </head>  
   <body>    
     <header>
@@ -16,15 +19,19 @@
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
           <i class="fas fa-bars"></i>
-        </label>      
+        </label>   
         <div class="header-right">
+          <div class="search-box" id="">
+            <input class= "search-txt" id="search-txt" type="text" name="" placeholder="Ingresar nombre de la película">
+            <a class= "search-bnt" href= "#"><i class="fas fa-search"></i></a>
+          </div> 
           <ul>
             <li>
               <a href="" id= "btnHeaderPrincipal">Principal</a>
             </li>
-            <li>
-              <a href="">Películas</a>
-              <ul>
+            <li >
+              <a id="listaOcultaSegundaria">Películas</a>
+              <ul id="saltoContenido">
                 <li><a href="">Castle in the Sky</a></li>
                 <li><a href="">My Neighbor Totoro</a></li>
                 <li><a href="">Kiki's Delivery Service</a></li>
@@ -53,12 +60,8 @@
             <li>
               <a href="">Comunidad</a>
             </li>
-          </ul> 
-        </div>        
-        <!-- <div class="search-box" id="">
-          <input class= "search-txt" type="text" name="" placeholder="Ingresar nombre de la película">
-          <a class= "search-bnt" href= "#"><i class="fas fa-search"></i></a>
-        </div>          -->
+          </ul>           
+        </div>       
       </nav>
     </header>
     
@@ -69,7 +72,7 @@
           <h2>a</h2><h3><span>GHIBLI NO SEKAI</span></h3><br>
           <h4>¡Disfruta del mejor contenido de películas animadas!</h4><br>
           <h4>Desde los clásicos hasta los últimos estrenos de Studio Ghibli.</h4>
-        </div>             
+        </div>           
   
         <div class="carrusel">
           <input type="radio" id="i1" name="images" checked>
@@ -122,28 +125,28 @@
             <p>Filtar por:</p>
             <ul>
               <li>
-                <a href="">Director</a>
+                <a>Director</a>
                 <ul>
-                  <li><a href="">Hayao Miyazaki</a></li>
-                  <li><a href="">Isao Takahata</a></li>
-                  <li><a href="">Yoshifumi Kondō</a></li>
-                  <li><a href="">Hiroyuki Morita</a></li>
-                  <li><a href="">Gorō Miyazaki</a></li>
-                  <li><a href="">Hiromasa Yonebayashi</a></li>
+                  <li><a id="">Hayao Miyazaki</a></li>
+                  <li><a id="">Isao Takahata</a></li>
+                  <li><a id="">Yoshifumi Kondō</a></li>
+                  <li><a id="">Hiroyuki Morita</a></li>
+                  <li><a id="">Gorō Miyazaki</a></li>
+                  <li><a id="">Hiromasa Yonebayashi</a></li>
                 </ul>
               </li>              
               <li>
-                <a href="">Productor</a>
+                <a>Productor</a>
                 <ul>
-                  <li><a href="">Isao Takahata</a></li>
-                  <li><a href="">Hayao Miyazaki</a></li>
-                  <li><a href="">Toru Hara</a></li>
-                  <li><a href="">Toshio Suzuki</a></li>
-                  <li><a href="">Yoshiaki Nishimura</a></li>
+                  <li><a>Isao Takahata</a></li>
+                  <li><a>Hayao Miyazaki</a></li>
+                  <li><a>Toru Hara</a></li>
+                  <li><a>Toshio Suzuki</a></li>
+                  <li><a>Yoshiaki Nishimura</a></li>
                 </ul> 
               </li>  
               <li>
-                <a href="">lanzamiento</a>
+                <a>lanzamiento</a>
                 <!-- <ul>
                   <li><a href=""></a></li>
                   <li><a href=""></a></li>
@@ -154,39 +157,41 @@
                 </ul> -->
               </li>                       
             </ul>  
-          </nav>                     
-        </div>            
-        
-        <div class="secOrdenado">            
-          <nav> 
-            <p>Visualizar películas en orden:</p>
+          <!-- </nav>   -->
+        <!-- </div> -->
+        <!-- <div class="secOrdenado">   -->         
+          <!-- <nav>  -->
+            <p>Por orden:</p>
             <ul>
               <li>
-                <a href="">Cronológico</a>
+                <a>lanzamiento</a>
                 <ul>
-                  <li><a href="">Ascendente</a></li>
-                  <li><a href="">Descendente</a></li>                  
+                  <li><a id="yearAsc">Mas Antigua</a></li>
+                  <li><a id="yearDesc">Mas Nueva</a></li>                  
                 </ul>
               </li>              
               <li>
-                <a href="">Alfabético</a>
+                <a>Alfabético</a>
                 <ul>
-                  <li><a href="">A -- Z</a></li>
-                  <li><a href="">Z -- A</a></li>                  
+                  <li><a id="a_z">A -- Z</a></li>
+                  <li><a id="z_a">Z -- A</a></li>                  
                 </ul> 
               </li>  
               <li>
-                <a href="">Calificación</a>
+                <a >Calificación</a>
                 <ul>
-                  <li><a href="">Mayor puntaje</a></li>
-                  <li><a href="">Menor puntaje</a></li>                  
+                  <li><a id="mayorToMenor">Mayor puntaje</a></li>
+                  <li><a id="menorToMayor">Menor puntaje</a></li>                  
                 </ul>
               </li>                        
             </ul>  
           </nav>                
-        </div>            
-        <section class="boxPoster" id="boxPoster">           
-        </section>
+        </div>
+
+        <section class="boxPoster" id="boxPoster"></section>
+
+        <section class="boxPoster" id= "boxPosterFilter"></section>
+                  
       </div>                      
     </main>
 
@@ -202,24 +207,65 @@
           <div class="contentPage2" id="textPage8"></div>
          </div>         
       </section> 
+
       <section class="seccionPersonajes">        
-        <div class="TitleSec">
-          <h4>Personajes:</h4>
-        </div>
+        <div class="TitleSec"><h4>Personajes:</h4></div>       
         <div class="contenidoSubPage" id= "contenidoPagePersonajes"></div>
-      </section>     
+      </section>  
+
+      <section class= "fondo">
+        <div class="contenedor-modal">
+            <a class="cta" id="cta" href="#">Abrir Modal</a>
+        </div>
+        <div class="modal-container" id="modalCont">
+
+            <div class="modal modalClose" id="modal">
+
+              <div class="cajaSuperior">
+                <p class="close" id="close">x</p>
+                <h2>IDENTIFICACIÓN</h2>
+              </div>
+
+              <div class="cajaMedia">
+
+                <div class="fondoImg">
+                  <div class="imagen-carnet" id="imagen-carnet">          
+                    <img src="https://static.wikia.nocookie.net/studio-ghibli/images/8/8b/Pazu.jpg" alt="">
+                  </div>
+                </div> 
+
+                <div class="seccionDatos">
+                  <div class="contenido-texto" id="contenido-texto">
+                    <p>Name: Pazu</p><br>
+                    <p>Gender: Male</p><br>
+                    <p>Age: 13</p><br>
+                    <p>Eye color: Black</p><br>
+                    <p>Specie: Human</p>        
+                  </div>
+
+                  <div class="codigoQR">
+                    <img src="./imagenes/codigoQR.PNG" alt="">
+                  </div>
+                </div>           
+                
+              </div>
+              
+              <div class= "cajaFinal">
+                <div class="finalCarnet"><h3>GHIBLI NO SEKAI</h3></div>  
+              </div>          
+            </div> 
+        </div>
+      </section>  
+
       <section class="seccionLocalidades">        
-        <div class="TitleSec">
-          <h4>Locaciones:</h4>
-        </div>
-        <div class="contenidoSubPage" id= "contenidoPageLocaciones"></div>
+          <div class="TitleSec"><h4>Locaciones:</h4></div>
+          <div class="contenidoSubPage" id= "contenidoPageLocaciones"></div>
       </section>
+
       <section class="seccionVehiculos">        
-        <div class="TitleSec">
-          <h4>Vehículos:</h4>
-        </div>
+        <div class="TitleSec"><h4>Vehículos:</h4></div>
         <div class="contenidoSubPage" id= "contenidoPageVehiculos"></div>
-      </section>        
+      </section>          
     </div>
 
     <footer> 
@@ -246,3 +292,5 @@
     <script src="main.js" type="module"></script>
   </body>
 </html>
+
+
