@@ -39,10 +39,10 @@ function renderCatalogo(dataArray, htmlLocation){
     dataArray.forEach( (obj) => {
         list +=`
         <div class="portada">
-            <button id= "btnPortada${[i]}">
+            <button id="btnPortada${[i]}">
             <img src="${obj.poster}" alt="">                
             </button>
-            <div class="textoImg" id= "">${obj.title}</div>
+            <div class="textoImg" id="${obj.title}">${obj.title}</div>
         </div>`
         htmlLocation.innerHTML = list;
         i++; 
