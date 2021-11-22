@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>Data Lovers</title>
-    <script src="https://kit.fontawesome.com/59bcf52c44.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
   </head>  
   <body>    
     <header>
@@ -21,44 +23,32 @@
           <i class="fas fa-bars"></i>
         </label>   
         <div class="header-right">
-          <div class="search-box" id="">
-            <input class= "search-txt" id="search-txt" type="text" name="" placeholder="Ingresar nombre de la película">
-            <a class= "search-bnt" href= "#"><i class="fas fa-search"></i></a>
-          </div> 
           <ul>
             <li>
-              <a href="" id= "btnHeaderPrincipal">Inicio</a>
+              <a id= "btnHeaderPrincipal">Inicio</a>
             </li>
             <li >
-              <a id="listaOcultaSegundaria">Películas</a>
-              <ul id="saltoContenido">
-                <li><a href="">Castle in the Sky</a></li>
-                <li><a href="">My Neighbor Totoro</a></li>
-                <li><a href="">Kiki's Delivery Service</a></li>
-                <li><a href="">Grave of the Fireflies</a></li>
-                <li><a href="">Only Yesterday</a></li>
-                <li><a href="">Porco Rosso</a></li>
-                <li><a href="">Pom Poko</a></li>
-                <li><a href="">Whisper of the Heart</a></li>
-                <li><a href="">Princess Mononoke</a></li>
-                <li><a href="">My Neighbors the Yamadas</a></li>
-                <li><a href="">Spirited Away</a></li>
-                <li><a href="">The Cat Returns</a></li>
-                <li><a href="">Howl's Moving Castle</a></li>
-                <li><a href="">Tales from Earthsea</a></li>
-                <li><a href="">Ponyo on the Cliff by the Sea</a></li>
-                <li><a href="">The Borrower Arrietty</a></li>
-                <li><a href="">From Up on Poppy Hill</a></li>
-                <li><a href="">The Wind Rises</a></li>
-                <li><a href="">The Tale of the Princess Kaguya</a></li>
-                <li><a href="">When Marnie Was There</a></li>            
-              </ul>
+              <a >Películas</a>
+              <ul id="listaOcultaSegundaria"></ul>     
             </li>
             <li>
-                <a>Géneros</a>
+                <a id="">Categorías</a>
+                <ul id="btnHeaderCategorias">
+                  <li><a href="#Aventura" >Aventura</a></li>
+                  <li><a href="#Sobrenatural">Sobrenatural</a></li>
+                  <li><a href="#Drama">Drama</a></li>
+                  <li><a href="#Fantasía">Fantasía</a></li>
+                  <li><a href="#Romance">Romance</a></li>
+                  <li><a href="#Acción">Acción</a></li>
+                  <li><a href="#Psicológico">Psicológico</a></li>
+                  <li><a href="#Misterio">Misterio</a></li>
+                  <li><a href="#Histórico">Histórico</a></li>
+                  <li><a href="#Sci-Fi">Sci-Fi</a></li>
+                  <li><a href="#Mágia">Mágia</a></li>
+                </ul>
             </li>
             <li>
-              <a>Comunidad</a>
+              <a id="btnGraficas">Gráficas</a>
             </li>
           </ul>           
         </div>       
@@ -70,9 +60,11 @@
         <div class="mensaje_bienvenida">         
           <h1>Bienvenido</h1>
           <h2>a</h2><h3><span>GHIBLI NO SEKAI</span></h3><br>
+        </div> 
+        <div class="mensaje">
           <h4>¡Disfruta del mejor contenido de películas animadas!</h4><br>
           <h4>Desde los clásicos hasta los últimos estrenos de Studio Ghibli.</h4>
-        </div>           
+        </div>                
   
         <div class="carrusel">
           <input type="radio" id="i1" name="images" checked>
@@ -117,56 +109,35 @@
             <label for="i3" class="dots" id="dot3"></label>
             <label for="i4" class="dots" id="dot4"></label>
             <label for="i5" class="dots" id="dot5"></label>
-          </div>  
-        </div>
-                
+          </div> 
+        </div>  
+
         <div class="secfiltrado">            
-          <div class="caja1_filtrado">
-            <nav> 
+          <nav> 
+            <div class="boxSecFilter">
               <p>Filtrar por:</p>
               <ul>
                 <li>
                   <a>Director</a>
-                  <ul>
-                    <li><a id="">Hayao Miyazaki</a></li>
-                    <li><a id="">Isao Takahata</a></li>
-                    <li><a id="">Yoshifumi Kondō</a></li>
-                    <li><a id="">Hiroyuki Morita</a></li>
-                    <li><a id="">Gorō Miyazaki</a></li>
-                    <li><a id="">Hiromasa Yonebayashi</a></li>
-                  </ul>
+                  <ul id="listDirector"></ul>
                 </li>              
                 <li>
                   <a>Productor</a>
-                  <ul>
-                    <li><a>Isao Takahata</a></li>
-                    <li><a>Hayao Miyazaki</a></li>
-                    <li><a>Toru Hara</a></li>
-                    <li><a>Toshio Suzuki</a></li>
-                    <li><a>Yoshiaki Nishimura</a></li>
-                  </ul> 
+                  <ul id="listProducer"></ul> 
                 </li>  
                 <li>
-                  <a>lanzamiento</a>
-                  <!-- <ul>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                  </ul> -->
+                  <a>Año</a>
+                  <ul id="listYear"></ul>
                 </li>                       
-              </ul>  
-            </nav>  
-          </div>
-          <div class="caja2_ordenado">           
-            <nav> 
+              </ul>               
+            </div>
+
+            <div class="boxSecFilter">
               <p>Ordenar por:</p>
               <ul>
                 <li>
                   <a>lanzamiento</a>
-                  <ul>
+                  <ul id="listOrdernDate">
                     <li><a id="yearAsc">Mas Antigua</a></li>
                     <li><a id="yearDesc">Mas Nueva</a></li>                  
                   </ul>
@@ -174,8 +145,8 @@
                 <li>
                   <a>Alfabético</a>
                   <ul>
-                    <li><a id="a_z">A -- Z</a></li>
-                    <li><a id="z_a">Z -- A</a></li>                  
+                    <li><a id="a_z">A--Z</a></li>
+                    <li><a id="z_a">Z--A</a></li>                  
                   </ul> 
                 </li>  
                 <li>
@@ -185,10 +156,17 @@
                     <li><a id="menorToMayor">Menor puntaje</a></li>                  
                   </ul>
                 </li>                        
-              </ul>  
-            </nav>
-          </div>
+              </ul>            
+            </div>                                  
+          </nav>                         
+        </div><br>
+        <div class="container-searchBar">
+          <div class="search-box" id="">
+            <input class= "search-txt" id="cardFilter" type="text" name="" placeholder="Ingresar nombre de la película">
+            <a class= "search-bnt" id="btnSearch"><i class="fas fa-search"></i></a>
+          </div> 
         </div>
+        
 
         <section class="boxPoster" id="boxPoster"></section>
 
@@ -198,60 +176,23 @@
     </main>
 
     <div id= "pagina2" class="pagina2">
-      <section class="contenidoPage" id= "contenidoPage">
-         <div class="contentImagPage2" id="textPage6"></div>
-         <div class="contentMovie">
-          <div class="contentPage2" id="textPage2"></div>
-          <div class="contentPage2" id="textPage3"></div>
-          <div class="contentPage2" id="textPage4"></div>
-          <div class="contentPage2" id="textPage5"></div>
-          <div class="contentPage2" id="textPage7"></div>
-          <div class="contentPage2" id="textPage8"></div>
-         </div>         
+      <section class="contenidoPage" id= "contenidoPage">       
       </section> 
 
       <section class="seccionPersonajes">        
         <div class="TitleSec"><h4>Personajes:</h4></div>       
-        <div class="contenidoSubPage" id= "contenidoPagePersonajes"></div>
+        <div class="contenidoSubPage" id="contenidoPagePersonajes"></div>
       </section>  
 
-      <section class= "fondo">
-        <div class="contenedor-modal">
-            <a class="cta" id="cta" href="#">Abrir Modal</a>
-        </div>
+      <section class= "fondo">       
         <div class="modal-container" id="modalCont">
-
             <div class="modal modalClose" id="modal">
-
               <div class="cajaSuperior">
                 <p class="close" id="close">x</p>
                 <h2>IDENTIFICACIÓN</h2>
               </div>
 
-              <div class="cajaMedia">
-
-                <div class="fondoImg">
-                  <div class="imagen-carnet" id="imagen-carnet">          
-                    <img src="https://static.wikia.nocookie.net/studio-ghibli/images/8/8b/Pazu.jpg" alt="">
-                  </div>
-                </div> 
-
-                <div class="seccionDatos">
-                  <div class="contenido-texto" id="contenido-texto">
-                    <p>Name: Pazu</p><br>
-                    <p>Gender: Male</p><br>
-                    <p>Age: 13</p><br>
-                    <p>Eye color: Black</p><br>
-                    <p>Specie: Human</p>        
-                  </div>
-
-                  <div class="codigoQR">
-                    <img src="./imagenes/codigoQR.PNG" alt="">
-                  </div>
-                </div>           
-                
-              </div>
-              
+              <div class="cajaMedia" id="modalData"></div>
               <div class= "cajaFinal">
                 <div class="finalCarnet"><h3>GHIBLI NO SEKAI</h3></div>  
               </div>          
@@ -270,6 +211,109 @@
       </section>          
     </div>
 
+    <div id= "pagina3" class="pagina3">
+      <div class="containerCategory">
+        <section class="contenidoPageGeneros" id= "contenidoPageGeneros">                     
+          <div class="categoryMovie">
+            <a name="Aventura"/>
+            <h4>Aventura:</h4>
+            <div class="renderCategory" id="Adventure"></div>
+          </div>
+          <div class="categoryMovie">
+            <a name="Sobrenatural"/>
+            <h4>Sobrenatural:</h4>
+            <div class="renderCategory" id="Supernatural"></div>
+          </div>
+          <div class="categoryMovie">
+            <a name="Drama"/>
+            <h4>Drama:</h4>
+            <div class="renderCategory" id="Drama"></div>
+          </div>
+          <div class="categoryMovie">
+            <a name="Fantasía"/>
+            <h4>Fantasía:</h4>
+            <div class="renderCategory" id="Fantasy"></div>
+          </div>
+          <div class="categoryMovie">
+            <a name="Comedia"/>
+            <h4>Comedia:</h4>
+            <div class="renderCategory" id="Comedy"></div>
+          </div>
+          <div class="categoryMovie">
+            <a name="Romance"/>
+            <h4>Romance:</h4>
+            <div class="renderCategory" id="Romance"></div>
+          </div>
+          <div class="categoryMovie">
+            <a name="Acción"/>
+            <h4>Acción:</h4>
+            <div class="renderCategory" id="Accion"></div>
+          </div>
+          <div class="categoryMovie">
+            <a name="Psicológico"/>
+            <h4>Psicológico:</h4>
+            <div class="renderCategory" id="Psychology"></div>
+          </div>
+          <div class="categoryMovie">
+            <a name="Misterio"/>
+            <h4>Misterio:</h4>
+            <div class="renderCategory" id="Mystery"></div>
+          </div>
+          <div class="categoryMovie">
+            <a name="Histórico"/>
+            <h4>Histórico:</h4>
+            <div class="renderCategory" id="Historical"></div>
+          </div>
+          <div class="categoryMovie">
+            <a name="Sci-Fi"/>
+            <h4>Sci-Fi:</h4>
+            <div class="renderCategory" id="Sci-Fi"></div>
+          </div>
+          <div class="categoryMovie">
+            <a name="Mágia"/>
+            <h4>Mágia:</h4>
+            <div class="renderCategory" id="Magic"></div>
+          </div>         
+          
+        </section>
+      </div>      
+    </div>
+
+    <div id= "pagina4" class="pagina4">
+      <section class="contenidoPageGraficas" id= "contenidoPageGraficas">
+        <div class=" graficas-contenido">
+          <div class="boxPage4 box1">
+            <p class="chartTitle">Average Movies</p>
+            <div class="boxChart">
+              <canvas id="myChart"></canvas>
+            </div>
+          </div>
+          <div class="boxPage4">
+            <div class="contentBoxCharts">
+              <p class="chartTitle">Average Gender</p>
+              <div class="boxChart chart2">
+                <canvas id="myChart2"></canvas>
+              </div>
+            </div>
+            <div class="contentBoxCharts">
+              <p class="chartTitle">Average Species</p>
+              <div class="boxChart chart2">
+                <canvas id="myChart3"></canvas>
+              </div>
+            </div>
+            <div class="contentBoxCharts">
+              <p class="chartTitle">Average Category</p>
+              <div class="boxChart chart2">
+                <canvas id="myChart4"></canvas>
+              </div>
+            </div>
+          </div>         
+        </div>
+      </section>
+    </div>
+
+    <div id="buttomScrollTop"></div>
+
     <footer> 
       <div class="contenedor-principal"> 
         <div class="contenedor">
@@ -284,15 +328,17 @@
       <div class="contenedor-secundario">
         <div class="contenedor">
           <p class="copy">Desarrollado por Maizaga y Katerin © 2021. Todos los derechos reservados.</p>
+          <p lass="copy">Privacy Policy | Cookie Policy | Do Not Sell My Personal Information | Terms | </p>
         </div>
       </div>
-      
-      <!-- <p>Privacy Policy | Cookie Policy | Do Not Sell My Personal Information | Terms | </p>
-      <p> Desarrollado por Maizaga y KaterinT © 2021. Todos los derechos reservados.</p>          -->
     </footer>
+    <script src="https://kit.fontawesome.com/59bcf52c44.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/a5f03eb3dc.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
     <script src="main.js" type="module"></script>
   </body>
 </html>
+
+
 
 
