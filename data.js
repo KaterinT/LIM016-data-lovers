@@ -20,8 +20,8 @@ export const producerFilter = (producer) => {
 //---------------------------filter by movie----------------------------
 export const moviesFilter = (movieId) => {
   return films.filter((film) => {
-    return film.id === movieId;
-  });
+    return film.id === movieId;    
+  });  
 };
 
 //---------------------------filter by release date----------------------------
@@ -35,84 +35,43 @@ export const  yearFilter = (release_date) => {
 //---------------------order alfabético de la a--z ---------------------
 export const orderAz = (films) => {      
   return films.sort((a,b) => {
-    if (a.title < b.title) {
-      return -1;
-    }
-    if (a.title > b.title) {
-      return 1;
-    }
-    return 0;
-  }); 
-    
+    if (a.title < b.title) {return -1}   
+  });     
 }
 
 //---------------------order alfabético de la z--a ---------------------
 export const orderZa = (films) => {      
   return films.sort((a,b) => {
-    if (a.title > b.title) {
-      return -1;
-    }
-    if (a.title < b.title) {
-      return 1;
-    }
-    return 0;
-  }); 
-    
+    if (a.title > b.title) {return -1}    
+  });     
 }
 
 // ----------orden por fecha de lanzamiento (mas antigua)-----------
 export const orderYearAsc = (films) => {      
   return films.sort((a,b) => {
-    if (a.release_date < b.release_date) {
-        return -1;
-    }
-    if (a.release_date > b.release_date) {
-        return 1;
-    }
-    return 0;
-  });
-    
+    if (a.release_date < b.release_date) {return -1}    
+  });    
 }
 
 // ----------orden por fecha de lanzamiento (mas nueva)-----------
 export const orderYearDesc= (films) => {
   return films.sort((a,b) => {
-    if (a.release_date > b.release_date) {
-        return -1;
-    }
-    if (a.release_date < b.release_date) {
-        return 1;
-    }
-    return 0;
+    if (a.release_date > b.release_date) {return -1}    
   });
 }
 
 //----------orden por calificación (Mayor puntaje)-----------
 export const mayorPuntaje = (films) => {
   return films.sort((a,b) => {
-    if (parseInt(a.rt_score) > parseInt(b.rt_score)) {
-        return -1;
-    }
-    if (parseInt(a.rt_score) < parseInt(b.rt_score)) {
-        return 1;
-    } 
-    return 0;
-  });
-  
+    if (parseInt(a.rt_score) > parseInt(b.rt_score)) {return -1}
+  });  
 };
 
 //----------orden por calificación (menor puntaje)-----------
 export const menorPuntaje = (films) => {
   return films.sort((a,b) => {
-    if (parseInt(a.rt_score) < parseInt(b.rt_score)) {
-        return -1;
-    }
-    if (parseInt(a.rt_score) > parseInt(b.rt_score)) {
-        return 1;
-    } 
-    return 0;
+    if (parseInt(a.rt_score) < parseInt(b.rt_score)) {return -1}
   });
-  
 };
 
 
