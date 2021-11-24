@@ -31,7 +31,7 @@ describe('directorFilter', () => {
   });
 });
 
-describe('producerFilter', () => {
+describe('producerFilter', () => {  
   it('is a function', () => {
     expect(typeof producerFilter).toBe('function');
   });

@@ -4,14 +4,10 @@ const films = data.films;
 
 //-----------------------------FILTER----------------------------------------
 //---------------------------filter by director----------------------------
-// export const directorFilter = (director) => {       
-//   return films.filter((film) => {
-//     return film.director ===  director;
-//   });    
-// };
-
 export const directorFilter = (director) => {       
-  return films.filter( f => f.director ===  director );    
+  return films.filter((film) => {
+    return film.director ===  director;
+  });    
 };
 
 //---------------------------filter by producer----------------------------
