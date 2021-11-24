@@ -6,11 +6,17 @@
 
 Ghibli no Sekai es una platafoma que le permite a los usuarios acceder a información general y detallada de una gran cantidad de películas producidas por Studio Ghibli.
 
-## Definición del producto
+## Studios Ghibli
+
+El Studio Ghibli (スタジオジブリ Sutajio Jiburi?) es un estudio de animación japonés, con sede en Tokio. Fundada en 1985 por Isao Takahata y Hayao Miyazaki, y a hasta la fecha, han realizado más de 20 películas. Tienen el respeto tanto del público japonés como el internacional, donde tanto la crítica como el sector de la animación le presenta muchos respetos.
+
+##  Definición del Producto 
+
+
 
 ##  Resumen del proyecto
 
-El proceso de desarrollo de la interfaz Ghibli no Sekai tomo 4 semanas aproximadamente.Tomando en cuenta la planificación, prototipado y 
+El proceso de desarrollo de la interfaz Ghibli no Sekai tomo 4 semanas aproximadamente.Tomando en cuenta la planificación prototipado y cóodificación del makup en html y css, funcionalidades de js y pruebas.En todo el proceso se realizaron pruebas de usabilidad para corregir y hacer mejoras de las funcionalidades y estilos.
 
 ## Diseño de la Interfaz de Usuario
 
@@ -68,7 +74,7 @@ El proceso de desarrollo de la interfaz Ghibli no Sekai tomo 4 semanas aproximad
 </p></details>
 
 ## Link de GitHub Pages 
-[Ghibli no Sekai](https://pandartist93.github.io/LIM016-data-lovers/)  
+[Ghibli no Sekai](https://pandartist93.github.io/LIM016-data-lovers/)
 
 ## CONDICIONES DEL PROYECTO 
 

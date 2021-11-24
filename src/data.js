@@ -11,7 +11,7 @@ const films = data.films;
 // };
 
 export const directorFilter = (director) => {       
-  return films.filter( f => f.director ===  director );    
+ return films.filter( f => f.director ===  director );    
 };
 
 //---------------------------filter by producer----------------------------
