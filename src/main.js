@@ -1,18 +1,7 @@
 /* import { conditionalExpression } from '@babel/types'; */
 
-import { directorFilter } from './data.js';
-import { moviesFilter } from './data.js';
-import { producerFilter } from './data.js';
-import { yearFilter } from './data.js';
-import { orderAz } from './data.js';
-import { orderZa } from './data.js';
-import { orderYearAsc } from './data.js';
-import { orderYearDesc } from './data.js';
-import { mayorPuntaje } from './data.js';
-import { menorPuntaje } from './data.js';
+import { directorFilter, moviesFilter, producerFilter, yearFilter, orderAz, orderZa, orderYearAsc, orderYearDesc, mayorPuntaje, menorPuntaje } from './data.js';
 import data from './data/ghibli/ghibli.js';
-
-// console.log((data));
 const films = data.films;
 
 // ---------------------modal------------------------

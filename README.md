@@ -14,6 +14,8 @@ El Studio Ghibli (スタジオジブリ Sutajio Jiburi?) es un estudio de animac
 
 
 
+Ghibli no Sekai en una interfaz que le permite a los usuarios poder interactuar y visualizar distintas vistas o secciones, que contienen imagenes y texto referentes a la temática de Studio Ghibli. Para accceder a las distintas vistas, el usuario deberá dar click a los botones de la barra de navegación como a las imágenes de las portadas de las películas u otros elementos que sea "clickeables". 
+
 ##  Resumen del proyecto
 
 El proceso de desarrollo de la interfaz Ghibli no Sekai tomo 4 semanas aproximadamente.Tomando en cuenta la planificación prototipado y cóodificación del makup en html y css, funcionalidades de js y pruebas.En todo el proceso se realizaron pruebas de usabilidad para corregir y hacer mejoras de las funcionalidades y estilos.
@@ -61,6 +63,13 @@ El proceso de desarrollo de la interfaz Ghibli no Sekai tomo 4 semanas aproximad
    * [Historias de Usuario](https://docs.google.com/document/d/16qly3qnbOpn1K6DCBMk4-HYfJXRKFt7pBAau-bxgvAg/edit)  
   </p></details>
 </p>
+
+## Consideraciones generales
+
+* Buscamos que el usuario tenga acceso directo a las distintas vistas desde una barra de menú.
+* Que los usuarios desde que ingresaran a la interfaz entendieran la temática del page.
+* Que los usuarios se sientan comodos con la paleta de colores y la disposición de las imágenes.
+* Que los usuarios interactuaran con la pagina sencilla y de uso muy intuitivo. 
 
 ## Problemas detectados a través de tests de usabilidad
 1. Las imagenes pueden ser muy grandes.
