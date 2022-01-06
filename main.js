@@ -1,18 +1,7 @@
 /* import { conditionalExpression } from '@babel/types'; */
 
-import { directorFilter } from './data.js';
-import { moviesFilter } from './data.js';
-import { producerFilter } from './data.js';
-import { yearFilter } from './data.js';
-import { orderAz } from './data.js';
-import { orderZa } from './data.js';
-import { orderYearAsc } from './data.js';
-import { orderYearDesc } from './data.js';
-import { mayorPuntaje } from './data.js';
-import { menorPuntaje } from './data.js';
+import { directorFilter, moviesFilter, producerFilter, yearFilter, orderAz, orderZa, orderYearAsc, orderYearDesc, mayorPuntaje, menorPuntaje } from './data.js';
 import data from './data/ghibli/ghibli.js';
-
-// console.log((data));
 const films = data.films;
 
 // ---------------------modal------------------------
@@ -156,9 +145,9 @@ function renderMovieDetail(movie) {
             <div class="titlePage2" id="textpage2"><span class="contentPage2title">${movie.title}</span></div>
             <div class="contentPage2" id="textpage3">${movie.description} </div>
             <div class="contentPage2" id="textpage4"><span class="contentPage2Subtitle">Director:</span>${movie.director}</div>
-            <div class="contentPage2" id="textpage5"><span class="contentPage2Subtitle">Productor:</span> ${movie.producer}</div>
-            <div class="contentPage2" id="textpage7"><span class="contentPage2Subtitle">Año:</span>${movie.release_date} </div>
-            <div class="contentPage2" id="textpage8"><span class="contentPage2Subtitle">Puntaje:</span>${movie.rt_score}/100</div>
+            <div class="contentPage2" id="textpage5"><span class="contentPage2Subtitle">Producer:</span> ${movie.producer}</div>
+            <div class="contentPage2" id="textpage7"><span class="contentPage2Subtitle">Year:</span>${movie.release_date} </div>
+            <div class="contentPage2" id="textpage8"><span class="contentPage2Subtitle">Score:</span>${movie.rt_score}/100</div>
         </div>
     `
     contenidoPage.innerHTML = contentMovie;
@@ -174,12 +163,12 @@ function renderMovieDetail(movie) {
         } 
     }
     else{
-        contenidoPageLocaciones.innerHTML = "En esta película no es destacan locaciones específicas";
+        contenidoPageLocaciones.innerHTML = "Specific locations are not highlighted in this film";
     }
      
      // crear el catalogo de vehículos
     if (movie.vehicles.length == 0){
-        contenidoPageVehiculos.innerHTML = "En esta película no es destacan vehículos específicos";
+        contenidoPageVehiculos.innerHTML = "Specific vehicles are not featured in this movie";
     }
     else{
         for(let l = 0; l < movie.vehicles.length ; l++){
@@ -399,12 +388,6 @@ function addDirectorFilterCallback(){
     }
 }
 
-/* function directorFilter(director) {    
-    let filteredMovies = films.filter((film) => {
-        return film.director ===  director;
-    })
-    return filteredMovies
-}*/
 
 // ---------------generar dropdows productores------------
 function renderProducerDropdown() {
@@ -429,13 +412,6 @@ function addProducerFilterCallback(){
         });
     }
 }
-
-/* function producerFilter(producer) {
-    let filteredMovies = films.filter((film) => {
-        return film.producer ===  producer;
-    });
-    return filteredMovies
-} */
 
 // ---------------generar dropdows por Año------------
 function renderYearDropdown() {
@@ -741,7 +717,55 @@ function renderChart() {
 }
 renderChart();
 
+/*------------------------------carrusel------------------------------------*/
+addEventListener("DOMContentLoaded", () => {
+    const imagenes = ["img/img-1.PNG", "img/img-2.PNG", "img/img-3.PNG", 
+    "img/img-4.PNG", "img/img-5.PNG", "img/img-6.PNG", "img/img-7.PNG", "img/img-8.PNG", 
+    "img/img-9.PNG", "img/img-10.PNG"]
 
+    let i = 1;
+    const img1 = document.querySelector("#img1");
+    const img2 = document.querySelector("#img2");
+    const progressBar = document.querySelector("#progress-bar");
+    const divIndicadores = document.querySelector("#indicadores");
+    let porcentaje_base = 100/imagenes.length;
+    let porcentaje_actual = porcentaje_base;
+
+    for(let index = 0; index < imagenes.length; index++){
+        const div = document.createElement("div");
+        div.classList.add("circle");
+        div.id = index;
+        divIndicadores.appendChild(div);
+    }
+
+    progressBar.style.width = `${porcentaje_base}%` 
+    img1.src = imagenes[0];
+    const circulos = document.querySelectorAll(".circle");
+    circulos[0].classList.add("resaltado");
+
+    const slideshow = () => {
+        img2.src = imagenes[i]
+        const circulo_actual = Array.from(circulos).find(el => el.id ==i);
+        Array.from(circulos).forEach(cir => cir.classList.remove("resaltado"));
+        circulo_actual.classList.add("resaltado");
+
+        img2.classList.add("active");
+        i++
+        porcentaje_actual += porcentaje_base;
+        progressBar.style.width = `${porcentaje_actual}%`
+        if(i == imagenes.length){
+            i = 0;
+            porcentaje_actual = porcentaje_base - porcentaje_base;
+        }
+
+        setTimeout(() => {
+            img1.src = img2.src;
+            img2.classList.remove("active");
+        }, 1000);
+    }
+
+    setInterval(slideshow, 4000);
+});
 
 
 

@@ -19,7 +19,7 @@
       <nav>
         <div class="logo">
           <h3>GHIBLI</h3>
-          <a href="https://www.studioghibli.com.au/"><img src="./imagenes/kanji.PNG" alt=""> </a>        
+          <a target="_blank" href="https://www.studioghibli.com.au/"><img src="./imagenes/kanji.PNG" alt=""> </a>        
         </div>
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
@@ -28,30 +28,30 @@
         <div class="header-right">
           <ul>
             <li>
-              <a id= "btnHeaderPrincipal">Inicio</a>
+              <a id= "btnHeaderPrincipal">Home</a>
             </li>
             <li >
-              <a >Películas</a>
+              <a >Films</a>
               <ul id="listaOcultaSegundaria"></ul>     
             </li>
             <li>
-                <a id="">Categorías</a>
+                <a id="">Category</a>
                 <ul id="btnHeaderCategorias">
-                  <li><a href="#Aventura" >Aventura</a></li>
-                  <li><a href="#Sobrenatural">Sobrenatural</a></li>
+                  <li><a href="#Aventura" >Adventure</a></li>
+                  <li><a href="#Sobrenatural">Supernatural</a></li>
                   <li><a href="#Drama">Drama</a></li>
-                  <li><a href="#Fantasía">Fantasía</a></li>
+                  <li><a href="#Fantasía">Fantasy</a></li>
                   <li><a href="#Romance">Romance</a></li>
-                  <li><a href="#Acción">Acción</a></li>
-                  <li><a href="#Psicológico">Psicológico</a></li>
-                  <li><a href="#Misterio">Misterio</a></li>
-                  <li><a href="#Histórico">Histórico</a></li>
+                  <li><a href="#Acción">Action</a></li>
+                  <li><a href="#Psicológico">Psychological</a></li>
+                  <li><a href="#Misterio">Mystery</a></li>
+                  <li><a href="#Histórico">Historical</a></li>
                   <li><a href="#Sci-Fi">Sci-Fi</a></li>
-                  <li><a href="#Mágia">Mágia</a></li>
+                  <li><a href="#Mágia">Magic</a></li>
                 </ul>
             </li>
             <li>
-              <a id="btnGraficas">Gráficas</a>
+              <a id="btnGraficas">Graphics</a>
             </li>
           </ul>           
         </div>       
@@ -60,111 +60,67 @@
     
     <main id="main" class="main">
       <div class="principalPage" id="principalPage">
-        <div class="mensaje_bienvenida">         
-          <h1>Bienvenido</h1>
-          <h2>a</h2><h3><span>GHIBLI NO SEKAI</span></h3><br>
+        <div class="mensaje_bienvenida">        
+          <h3><span>GHIBLI NO SEKAI</span></h3><br>
         </div> 
         <div class="mensaje">
-          <h4>¡Disfruta del mejor contenido de películas animadas!</h4><br>
-          <h4>Desde los clásicos hasta los últimos estrenos de Studio Ghibli.</h4>
+          <h4>Enjoy the best animated movie content!</h4><br>
+          <h4>From the classics to the latest Studio Ghibli releases. </h4>
         </div>                
-  
-        <div class="carrusel" id="carrusel-box">
-          <input type="radio" id="i1" name="images" checked>
-          <input type="radio" id="i2" name="images">
-          <input type="radio" id="i3" name="images">
-          <input type="radio" id="i4" name="images">
-          <input type="radio" id="i5" name="images">
-          <input type="radio" id="i6" name="images">          
-          
-          <div class="slide_img" id="one">
-            <img class="imgStyle" src="https://wallpapers.com/images/high/ghibli-laputa-floating-city-0wp8lh4xl6ybsktx.jpg" alt="">
-            <label for="i5" class="prev"><span>&#x2039</span></label>
-            <label for="i2" class="next"><span>&#x203a</span></label>
-          </div>
-  
-          <div class="slide_img" id="two">
-            <img class="imgStyle" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/ghibli2-1548333192.jpg" alt="">
-            <label for="i1" class="prev"><span>&#x2039</span></label>
-            <label for="i3" class="next"><span>&#x203a</span></label>
-          </div>
-  
-          <div class="slide_img" id="three">
-            <img class="imgStyle" src="https://d3i6li5p17fo2k.cloudfront.net/en/rimage/pivot_half_1152/image/5330/a62d76623b89ef1efb5e37543e2504d3" alt="">
-            <label for="i2" class="prev"><span>&#x2039</span></label>
-            <label for="i4" class="next"><span>&#x203a</span></label>
-          </div>
-  
-          <div class="slide_img" id="four">
-            <img class="imgStyle" src="https://media.wired.co.uk/photos/606d9ea2ef15037f58853565/master/w_1600%2Cc_limit/ponyo.jpg" alt="">
-            <label for="i3" class="prev"><span>&#x2039</span></label>
-            <label for="i5" class="next"><span>&#x203a</span></label>
-          </div> 
-  
-          <div class="slide_img" id="five">
-            <img class="imgStyle" src="https://studioghiblimovies.com/wp-content/uploads/2014/11/bg2.jpg" alt="">
-            <label for="i4" class="prev"><span>&#x2039</span></label>
-            <label for="i6" class="next"><span>&#x203a</span></label>
-          </div>
 
-          <div class="slide_img" id="six">
-            <img class="imgStyle" src="https://www.toledoblade.com/image/2012/02/16/1140x_a10-7_cTC/Film-Review-The-Secret-World-of-Arrietty.JPG" alt="">
-            <label for="i5" class="prev"><span>&#x2039</span></label>
-            <label for="i1" class="next"><span>&#x203a</span></label>
-          </div>                 
-    
-          <div id="nav_slide">
-            <label for="i1" class="dots" id="dot1"></label>
-            <label for="i2" class="dots" id="dot2"></label>
-            <label for="i3" class="dots" id="dot3"></label>
-            <label for="i4" class="dots" id="dot4"></label>
-            <label for="i5" class="dots" id="dot5"></label>
-            <label for="i6" class="dots" id="dot6"></label>
-          </div> 
-        </div>  
+        <div id="slideshow-principal">
+          <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+          </div>
+          <div id="slideshow">
+            <img src=" " alt="" id="img1">
+            <img src=" " alt="" id="img2">
+          </div>
+          <div id="indicadores"></div>
+        </div>
 
         <div class="secfiltrado">            
           <nav> 
             <div class="boxSecFilter">
-              <p>Filtrar por:</p>
+              <p>Filter by:</p>
               <ul>
                 <li>
                   <a>Director</a>
                   <ul id="listDirector"></ul>
                 </li>              
                 <li>
-                  <a>Productor</a>
+                  <a>Producer</a>
                   <ul id="listProducer"></ul> 
                 </li>  
                 <li>
-                  <a>Año</a>
+                  <a>Year</a>
                   <ul id="listYear"></ul>
                 </li>                       
               </ul>               
             </div>
 
             <div class="boxSecFilter">
-              <p>Ordenar por:</p>
+              <p>Sort by:</p>
               <ul>
                 <li>
-                  <a>lanzamiento</a>
+                  <a>launching</a>
                   <ul id="listOrdernDate">
-                    <li><a id="yearAsc">Mas Antigua</a></li>
-                    <li><a id="yearDesc">Mas Nueva</a></li>                  
+                    <li><a id="yearAsc">Oldest</a></li>
+                    <li><a id="yearDesc">Newer</a></li>                  
                   </ul>
                 </li>              
                 <li>
-                  <a>Alfabético</a>
+                  <a>Alphabetical</a>
                   <ul>
                     <li><a id="a_z">A--Z</a></li>
                     <li><a id="z_a">Z--A</a></li>                  
                   </ul> 
                 </li>  
                 <li>
-                  <a >Calificación</a>
+                  <a >Qualification</a>
                   <ul>
-                    <li><a id="mayorToMenor">Mayor puntaje</a></li>
-                    <li><a id="menorToMayor">Menor puntaje</a></li>                  
+                    <li><a id="mayorToMenor">Highest score</a></li>
+                    <li><a id="menorToMayor">Lower score</a></li>                  
                   </ul>
                 </li>                        
               </ul>            
@@ -173,11 +129,10 @@
         </div><br>
         <div class="container-searchBar">
           <div class="search-box" id="">
-            <input class= "search-txt" id="cardFilter" type="text" name="" placeholder="Ingresar nombre de la película">
+            <input class= "search-txt" id="cardFilter" type="text" name="" placeholder="Enter movie name">
             <a class= "search-bnt" id="btnSearch"><i class="fas fa-search"></i></a>
           </div> 
-        </div>
-        
+        </div>        
 
         <section class="boxPoster" id="boxPoster"></section>
 
@@ -191,7 +146,7 @@
       </section> 
 
       <section class="seccionPersonajes">        
-        <div class="TitleSec"><h4>Personajes:</h4></div>       
+        <div class="TitleSec"><h4>Characters:</h4></div>       
         <div class="contenidoSubPage" id="contenidoPagePersonajes"></div>
       </section>  
 
@@ -200,7 +155,7 @@
             <div class="modal modalClose" id="modal">
               <div class="cajaSuperior">
                 <p class="close" id="close">x</p>
-                <h2>IDENTIFICACIÓN</h2>
+                <h2>IDENTIFICATION</h2>
               </div>
 
               <div class="cajaMedia" id="modalData"></div>
@@ -212,12 +167,12 @@
       </section>  
 
       <section class="seccionLocalidades">        
-          <div class="TitleSec"><h4>Locaciones:</h4></div>
+          <div class="TitleSec"><h4>Locations:</h4></div>
           <div class="contenidoSubPage" id= "contenidoPageLocaciones"></div>
       </section>
 
       <section class="seccionVehiculos">        
-        <div class="TitleSec"><h4>Vehículos:</h4></div>
+        <div class="TitleSec"><h4>Vehicles:</h4></div>
         <div class="contenidoSubPage" id= "contenidoPageVehiculos"></div>
       </section>          
     </div>
@@ -227,12 +182,12 @@
         <section class="contenidoPageGeneros" id= "contenidoPageGeneros">                     
           <div class="categoryMovie">
             <a name="Aventura"/>
-            <h4>Aventura:</h4>
+            <h4>Adventure:</h4>
             <div class="renderCategory" id="Adventure"></div>
           </div>
           <div class="categoryMovie">
             <a name="Sobrenatural"/>
-            <h4>Sobrenatural:</h4>
+            <h4>Supernatural:</h4>
             <div class="renderCategory" id="Supernatural"></div>
           </div>
           <div class="categoryMovie">
@@ -242,12 +197,12 @@
           </div>
           <div class="categoryMovie">
             <a name="Fantasía"/>
-            <h4>Fantasía:</h4>
+            <h4>Fantasy:</h4>
             <div class="renderCategory" id="Fantasy"></div>
           </div>
           <div class="categoryMovie">
             <a name="Comedia"/>
-            <h4>Comedia:</h4>
+            <h4>Comedy:</h4>
             <div class="renderCategory" id="Comedy"></div>
           </div>
           <div class="categoryMovie">
@@ -257,22 +212,22 @@
           </div>
           <div class="categoryMovie">
             <a name="Acción"/>
-            <h4>Acción:</h4>
+            <h4>Action:</h4>
             <div class="renderCategory" id="Accion"></div>
           </div>
           <div class="categoryMovie">
             <a name="Psicológico"/>
-            <h4>Psicológico:</h4>
+            <h4>Psychological:</h4>
             <div class="renderCategory" id="Psychology"></div>
           </div>
           <div class="categoryMovie">
             <a name="Misterio"/>
-            <h4>Misterio:</h4>
+            <h4>Mystery:</h4>
             <div class="renderCategory" id="Mystery"></div>
           </div>
           <div class="categoryMovie">
             <a name="Histórico"/>
-            <h4>Histórico:</h4>
+            <h4>Historical:</h4>
             <div class="renderCategory" id="Historical"></div>
           </div>
           <div class="categoryMovie">
@@ -282,10 +237,9 @@
           </div>
           <div class="categoryMovie">
             <a name="Mágia"/>
-            <h4>Mágia:</h4>
+            <h4>Magic:</h4>
             <div class="renderCategory" id="Magic"></div>
-          </div>         
-          
+          </div>       
         </section>
       </div>      
     </div>
@@ -328,18 +282,17 @@
     <footer> 
       <div class="contenedor-principal"> 
         <div class="contenedor">
-          <h2 class="titulo-seccion">Contáctanos </h2>
+          <h2 class="titulo-seccion">Contact us</h2>
         </div>   
         <div class="redes-sociales">
-            <a href="https://twitter.com/gen_ghibli?lang=en"><i id="twitter" class="redes fab fa-twitter"></i></a>
-            <a href="https://www.facebook.com/FansOfStudioGhibli/"><i id="fb" class="redes fab fa-facebook"></i></a>
-            <a href="https://www.youtube.com/watch?v=z4WCaWJgOqM"><i id="yt" class="redes fab fa-youtube"></i></a>
+            <a target="_blank" href="https://twitter.com/gen_ghibli?lang=en"><i id="twitter" class="fab fa-twitter"></i></a>
+            <a target="_blank" href="https://www.facebook.com/FansOfStudioGhibli/"><i id="fb" class="fab fa-facebook"></i></a>
+            <a target="_blank" href="https://www.youtube.com/watch?v=z4WCaWJgOqM"><i id="yt" class="fab fa-youtube"></i></a>
         </div>
       </div> 
       <div class="contenedor-secundario">
         <div class="contenedor">
-          <p class="copy">Desarrollado por Maizaga y Katerin © 2021. Todos los derechos reservados.</p>
-          <!-- <p lass="copy">Privacy Policy | Cookie Policy | Do Not Sell My Personal Information | Terms | </p> -->
+          <p class="copy">Developed by Maizaga and Katerin © 2021. All rights reserved.</p>
         </div>
       </div>
     </footer>
